@@ -1,0 +1,654 @@
+$primary-color: #ffe900;
+$secondary-color: #000000;
+$border-radius-buttons: 2rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+ font-family: "Quicksand", serif;
+}
+
+h1,h2,h3,a  {
+     letter-spacing: 0.1rem;
+}
+h2 {
+    font-size: 2rem;
+}
+// HEADER 
+.header {
+    z-index: 1;
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 2rem 3rem;
+    position:fixed;
+    .nav-cover {
+        display: flex;
+        align-items: center;
+        position:relative;
+    }
+.logo {
+    flex-basis: 10%;
+}
+.nav {
+    justify-self: end;
+    margin-right: 5rem;
+    ul li{
+        font-weight: 500;
+        display: inline-block;
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            &.active {
+                color: $primary-color;
+                background-color: rgba(0, 0, 0, 0.8);
+                border-radius: $border-radius-buttons;
+            
+        }
+           &:hover {
+            color: $primary-color;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: $border-radius-buttons;
+           }
+    }
+    }
+}
+.dropdown-leanguage {
+    position:absolute;
+    right: 0;
+    top: 0;
+    padding: 1.3rem 1.3rem 0 1.3rem;
+    background: black;
+
+    img {
+        display: block;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+    }
+    .inner-leanguage {
+        display: none;
+    }
+}
+
+
+}
+
+
+// BODY
+
+    .banner {
+    background-image:url('img/bmw2.jpg');
+    height: 40rem;
+    background-size: 110%;    
+    background-position: 0% 40%;
+    display: flex;
+    align-items:center;
+    color: white;  
+    .text-area {
+        margin-left: 10%;
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.5rem;
+            max-width: 60%;
+            margin: 1rem 0 4rem 0;
+        }
+        a {
+            background: $primary-color;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 900;
+            color: $secondary-color;
+            border-radius: $border-radius-buttons;
+        }
+    }
+    }
+
+
+    // WHY US SECTION
+
+    .whyUs {
+        margin-top: -5rem;
+        color: white;
+        display: flex;
+        justify-content:center;
+
+        .inner-section {
+            background-color: $secondary-color;
+            width: 60%;
+            border-radius: 3rem;
+        }
+        .list {
+            padding: 2rem 6rem;
+
+        }
+        h2 {
+            padding-bottom:2rem;
+            text-align:center;
+        }
+        ul {
+            display:inline-block;
+            width: 49%;
+            li {
+                text-decoration: none;
+                list-style-type: circle;
+                font-size: 1.2rem;
+                margin: 1rem 0;
+           &::marker {
+            color: $primary-color;
+           }
+            }
+
+        }
+
+    }
+
+    // FOLLOW US SECTION
+    
+
+    .followUs {
+        justify-content:center;
+        display:flex;
+        margin: 5rem 0;
+        .left {
+            display: flex;
+            align-items: center;
+            margin-right: 3rem;
+        }
+        .right {
+            padding: 1rem 0;
+            a {
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            -webkit-box-shadow: 10px 10px 40px 3px rgba(0,0,0,0.24);
+            -moz-box-shadow: 10px 10px 40px 3px rgba(0,0,0,0.24);
+            box-shadow: 10px 10px 40px 3px rgba(0,0,0,0.24);
+            color: White;
+            font-weight: 900;
+            font-family: "Quicksand", serif;
+            border: 0;
+            border-radius: $border-radius-buttons;
+            }
+            a:nth-child(3) {
+                background :black;
+            }
+            a:nth-child(1) {
+                background: linear-gradient( #f9ce34,#ee2a7b)
+            }
+            a:nth-child(2) {
+                background: linear-gradient(#00c6ff,#0072ff );
+            }
+        }
+    }
+
+
+
+    // CONTACT US SECTION
+
+    .contactUs {
+        padding: 5rem;
+        align-items: center;
+        color: white;
+        background-image: url('img/bmw3.jpg');
+        background-size: 100%;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+svg {
+    fill: $primary-color;
+}
+
+.info {
+    .place, .contact{
+        display: flex;
+    }
+.place {
+    margin: 3rem 0;
+}
+.contact {
+
+    svg {
+            margin-right: 1rem;
+    }
+}
+}
+
+.contact-form {
+    text-aligN: center;
+width: 400px;
+ border-radius:$border-radius-buttons;
+background: white;
+color: black;
+padding: 2rem 1rem;
+
+    h3 {
+        margin: 2rem 0;
+        font-size: 1.5rem;
+    }
+    form {
+
+    input, textarea {
+        margin: .2rem 0;
+        width: 100%;
+        padding: 1rem ;
+        border: 1px solid rgb(185, 185, 185);
+        border-radius: $border-radius-buttons;
+        resize: none;
+    &:nth-child(1),&:nth-child(2){
+        width: 49%;
+    }
+    
+    }
+    button {
+        margin: 1rem 0;
+        cursor: pointer;
+        background: $primary-color;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-weight: 900;
+        color: $secondary-color;
+        border-radius: $border-radius-buttons;
+        border: 0;
+        font-family: "Quicksand", serif;
+    }
+}
+}
+    }
+
+
+    // FOOTER SECTION
+
+    .footer {
+        background: $secondary-color;
+        color: white; 
+        display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 2rem;
+
+        .socials {
+        display: flex;
+    .tt {
+        margin-left: 1rem;
+        cursor:pointer;
+    }    
+    }
+    }
+
+
+
+    // SUB SITES
+
+
+    .banner-sec {
+        background-image:url('img/bmw2.jpg');
+        height: 12rem;
+        background-size: 110%;    
+        background-position: 0% 35%;
+        display: flex;
+        align-items: end;
+        color: white;   
+        .text-area {
+            margin-left: 10%;
+            h1 {
+                font-size: 2rem;
+                padding-bottom: 2rem;
+            }
+            p {
+                font-size: 1.5rem;
+                max-width: 60%;
+                margin: 1rem 0 4rem 0;
+            }
+            a {
+                background: $primary-color;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                font-weight: 900;
+                color: $secondary-color;
+                border-radius: $border-radius-buttons;
+            }
+        }
+        }
+
+        // PRODUCT LIST
+
+        .products-list {
+            display: flex;
+            justify-content:center;
+            padding: 3rem 0rem;
+            gap: 1rem;
+            flex-wrap:wrap;
+            a {
+                flex-basis: 20%;
+                text-decoration: none;
+                -webkit-box-shadow: 10px 10px 40px 3px rgba(0,0,0,0.24);
+                -moz-box-shadow: 10px 10px 40px 3px rgba(0,0,0,0.24);
+                box-shadow: 10px 10px 40px 3px rgba(0,0,0,0.24);
+                .product-photo img {
+                    width: 100%;
+                }
+                .product-desc {
+                    color: black;
+                    padding: 1rem;
+
+                    h4 {
+                        font-size: 1.2rem;
+                    }
+                    p {
+                        padding-top: 1rem;
+                    }
+                }
+            }
+        }
+
+
+        // PRODUCT DETAIL
+
+        .text-area-detail {
+            margin-left: 10%;
+            background: $primary-color;
+            padding: 1rem;
+            transform:translateY(25%);
+            h1 {
+                font-size: 2rem;
+                font-weight: 600;
+                color: $secondary-color;
+            }
+        }
+
+
+
+        .product-detail {
+            margin: 3rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        li {
+            text-decoration: none;
+            list-style-type: circle;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            font-weight: 600;
+       &::marker {
+        color: $primary-color;
+       }
+        }
+
+//reservation form
+
+.reservation-form {
+margin-bottom: 5rem;
+.contact-form {
+    text-aligN: center;
+    width: 60%;
+    margin: auto;
+ border-radius:$border-radius-buttons;
+background: white;
+color: black;
+
+    h3 {
+        margin: 2rem 0;
+        font-size: 1.5rem;
+    }
+    form {
+
+    input, textarea {
+        margin: .2rem 0;
+        width: 100%;
+        padding: 1rem ;
+        border: 1px solid rgb(185, 185, 185);
+        border-radius: $border-radius-buttons;
+        resize: none;
+    &:nth-child(1),&:nth-child(2){
+        width: 49%;
+    }
+    
+    }
+    button {
+        margin: 1rem 0;
+        cursor: pointer;
+        background: $primary-color;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-weight: 900;
+        color: $secondary-color;
+        border-radius: $border-radius-buttons;
+        border: 0;
+        font-family: "Quicksand", serif;
+    }
+}
+}
+}
+
+
+
+// KONTAKT
+
+
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 5rem;
+    .right {
+        flex-basis: 50%;
+    }
+    .left {
+        flex-basis: 35%;
+    }
+
+    .left {
+        display: flex;
+        flex-wrap:wrap;
+        .left-inner,.right-inner,.reservation-form {
+            flex: 50%;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: .2rem;
+        }
+        .right-inner{
+            text-align:right;
+
+        }
+}
+}
+
+
+
+// RESPONZIVITA
+
+.nav-hamburger{
+    display: none;
+}
+@media only screen and (max-width: 1000px) {
+    .dropdown-leanguage {
+        display: none;
+        
+    }
+    .nav-hamburger{
+        background: black;
+        display: block;
+        .inner-hamburger {
+            display :none;
+            position:absolute;
+            text-align:right;
+            background: black;
+            padding: 25px;
+            right: 0;
+            width: 200px;
+            border-radius: $border-radius-buttons;
+            li {
+                
+                list-style:none;
+                a {
+                text-decoration: none;
+                color: white;
+            }
+        }}
+
+    }
+    .nav-cover {
+        .nav {
+            display: none;
+        }
+    }
+
+
+    .banner {
+        height: 30rem;
+    }
+    .header {.logo {
+        flex-basis: 20%;
+    }
+}
+.whyUs {
+    .inner-section .list {
+        padding: 2rem 3rem;
+
+}
+
+
+}
+
+
+.followUs {
+    .right{
+        display:flex;
+        flex-direction: column;
+        width:20rem;
+        text-align:center;
+    }
+}
+
+
+.contactUs {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+.products-list {
+    a {
+       flex-basis: 30%;
+    }
+}
+
+.product-detail {
+flex-direction: column;
+gaP : 1rem;
+}
+
+.contact-page {
+    flex-direction: column;
+gap: 0;
+.right {
+    width: 100%;
+}
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+    .banner-sec {
+        height: 15rem;
+    }
+.header {
+
+    .logo {
+        flex-basis: 45%;
+    }
+}
+.banner {
+    height: 40rem;
+    background-position: 20% 50%;
+    background-size: cover;
+    .text-area {
+        p {
+            max-width:  95%;
+        }
+    }
+}
+
+.whyUs  .inner-section {
+width: 90%;
+
+.list {
+    h2 {
+        padding-bottom: .7rem;
+    }
+ul {
+    display: block;
+    width:100%;
+}
+}
+}
+
+.followUs {
+    flex-direction: column;
+    margin: 2.5rem 0;
+
+    .left {
+    margin-left: 2rem;
+    }
+    .right {
+        width: 80%;
+        margin: auto;
+    }
+}
+.contactUs {
+    background-size: cover;
+    padding: 5rem 0;
+    .contact-form {
+        margin: 0 1rem;
+        width:auto;
+    }
+}
+.footer {
+    .logo {
+        width: 10rem;
+         img {
+            width: 100%;
+         }
+    }
+}
+
+
+.products-list {
+    a {
+        flex-basis: 90%;
+    }
+}
+
+
+.product-detail {
+.right img{width: 400px;
+}
+}
+.reservation-form {
+    .contact-form {
+        width: 90%;
+    }
+}
+.contact-page {
+    padding: 4rem 1rem;
+
+    .right {
+        width:100%;
+    }
+}
+}
